@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --primary-green: #4CAF50;
+    --dark-green: #2E7D32;
+    --bg-cream: #f4f7ec;
+    --text-dark: #333333;
+    --wobbly-border: 4px solid var(--text-dark);
+    --apple-dark: #1a1a1a;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    background-image: radial-gradient(var(--primary-green) 0.7px, transparent 0.7px);
+    background-size: 25px 25px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: -150px;
+    left: -100px;
+    width: 600px;
+    height: 600px;
+    background: var(--primary-green);
+    opacity: 0.1;
+    border-radius: 45% 55% 70% 30% / 50% 30% 70% 50%;
+    transform: rotate(-20deg);
+    z-index: -1;
+    filter: blur(40px);
+    animation: morphBlob1 8s ease-in-out infinite;
+}
+
+@keyframes morphBlob1 {
+    0%, 100% { border-radius: 45% 55% 70% 30% / 50% 30% 70% 50%; }
+    50% { border-radius: 60% 40% 50% 60% / 40% 60% 40% 60%; }
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    bottom: -150px;
+    right: -50px;
+    width: 650px;
+    height: 650px;
+    background: var(--dark-green);
+    opacity: 0.12;
+    border-radius: 60% 40% 30% 70% / 30% 50% 50% 70%;
+    transform: rotate(15deg);
+    z-index: -1;
+    filter: blur(50px);
+    animation: morphBlob2 10s ease-in-out infinite;
+}
+
+@keyframes morphBlob2 {
+    0%, 100% { border-radius: 60% 40% 30% 70% / 30% 50% 50% 70%; }
+    50% { border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%; }
+}
+
+h1, h2, h3, .app-slogan, footer, .store-link {
+    font-family: 'Patrick+Hand', cursive;
+}
+
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.cacik-card {
+    background: #fff;
+    padding: 50px 40px;
+    max-width: 550px;
+    width: 90%;
+    border: var(--wobbly-border);
+    border-radius: 3% 6% 4% 7% / 5% 4% 7% 3%;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.15);
+    transform: rotate(-1.5deg);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.cacik-card:hover {
+    transform: rotate(0deg) scale(1.02) translateY(-5px);
+    box-shadow: 15px 15px 0px rgba(0,0,0,0.1);
+}
+
+.monster-logo {
+    width: 180px;
+    height: auto;
+    animation: float 3.5s ease-in-out infinite;
+    filter: drop-shadow(0px 5px 0px var(--dark-green));
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px) rotate(2deg); }
+    100% { transform: translateY(0px); }
+}
+
+.app-title {
+    font-size: 3.8rem;
+    margin: 15px 0 5px 0;
+    color: var(--dark-green);
+    text-shadow: 3px 3px 0px var(--primary-green);
+    letter-spacing: 1px;
+}
+
+.app-slogan {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+.store-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.store-link {
+    display: block;
+    text-decoration: none;
+    padding: 12px 25px;
+    border: 3px solid var(--text-dark);
+    border-radius: 18px 28px 22px 15px;
+    box-shadow: 5px 5px 0px var(--text-dark);
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    color: white;
+    font-size: 1.1rem;
+    transform: rotate(-2deg);
+}
+
+.store-link:hover {
+    transform: rotate(0deg) translate(3px, 3px);
+    box-shadow: 2px 2px 0px var(--text-dark);
+}
+
+.store-content-wrapper {
+    display: flex;
+    align-items: center;
+    transform: rotate(2deg);
+    transition: transform 0.2s ease;
+}
+
+.store-link:hover .store-content-wrapper {
+    transform: rotate(0deg);
+}
+
+.store-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    fill: white;
+}
+
+.google-play { background-color: var(--primary-green); }
+.google-play:hover { background-color: var(--dark-green); }
+
+.app-store { background-color: var(--apple-dark); }
+.app-store:hover { background-color: #000000; }
+
+.store-text {
+    text-align: left;
+    line-height: 1.1;
+}
+
+.store-text small {
+    display: block;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.store-text span {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+footer a {
+    color: var(--dark-green);
+    text-decoration: none;
+    border-bottom: 3px dashed var(--primary-green);
+    font-weight: bold;
+}
