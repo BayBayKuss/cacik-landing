@@ -79,89 +79,58 @@
 
     <h1>KVKK Aydınlatma Metni (Türkçe)</h1>
 
-    <p>Bu aydınlatma metni, Furowlan (Cacık uygulamasının geliştiricisi ve veri sorumlusu) tarafından sunulan Cacık mobil uygulaması için geçerlidir.</p>
+    <p>Bu aydınlatma metni, Furowlan (veri sorumlusu ve geliştirici) tarafından sunulan Cacık mobil uygulaması ("Uygulama") için geçerlidir. Uygulama, kullanıcılardan herhangi bir hesap oluşturmasını (login) istemez ve isim, e-posta veya telefon numarası gibi doğrudan kimlik saptayıcı veriler toplamaz.</p>
 
     <h2>1. Toplanan Veriler ve Hukuki Sebep</h2>
-    <p>Uygulama aşağıdaki verileri otomatik olarak toplamaktadır:</p>
+    <p>Uygulamanın performansını artırmak, hataları tespit etmek ve kullanıcı deneyimini iyileştirmek amacıyla aşağıdaki telemetri verileri otomatik olarak toplanmaktadır. Bu veriler, KVKK Madde 5/2-f uyarınca veri sorumlusunun meşru menfaati hukuki sebebine dayanılarak işlenmektedir:</p>
     <ul>
-        <li>IP adresi ve işletim sistemi bilgileri</li>
-        <li>Uygulama içi tercihler (üniversite, kampüs, bölüm, tema seçimi, favori yemekler, bildirim izin durumu)</li>
-        <li>Etkileşim verileri ve ekran görüntülenme süreleri</li>
-        <li>Teşhis (diagnostic) verileri ve çökme kayıtları</li>
-    </ul>
-    <p>Bu veriler KVKK Madde 5/2-f uyarınca meşru menfaat hukuki sebebine dayanılarak işlenmektedir.</p>
-    <p><strong>Önemli Not:</strong> Uygulama doğrudan kimlik belirleyici veri (isim, e-posta vb.) toplamaz. Veriler belirli veya belirlenebilir bir gerçek kişiyle doğrudan ilişkilendirilemeyecek şekilde teknik ve idari tedbirler alınarak takma adlı (pseudonymized) olarak işlenmektedir.</p>
-
-    <h2>2. Reklam ve Takip</h2>
-    <p>Uygulama reklam ağı kullanmamaktadır ve reklam kimliği toplamamaktadır.</p>
-
-    <h2>3. Yurt Dışına Veri Aktarımı</h2>
-    <p>Veriler, uygulamanın performansını ölçmek amacıyla Google LLC tarafından sağlanan Firebase hizmetleri aracılığıyla yurt dışındaki sunuculara aktarılmaktadır:</p>
-    <ul>
-        <li><a href="https://firebase.google.com/policies/analytics" target="_blank" rel="noopener noreferrer">Google Analytics for Firebase</a></li>
-        <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Crashlytics</a></li>
+        <li><strong>Cihaz Kimlikleri (Device Identifiers):</strong> Firebase App Instance ID ve Crashlytics Installation UUID gibi rastgele üretilmiş, cihaza özgü takma adlı (pseudonymous) kimlikler.</li>
+        <li><strong>Yaklaşık Konum:</strong> IP adresinden otomatik olarak türetilen, il/bölge düzeyinde yaklaşık konum bilgisi.</li>
+        <li><strong>Uygulama Etkinliği (App Activity):</strong> Uygulama içi etkileşimler (üniversite, kampüs, bölüm, tema seçimi, favori yemekler, bildirim izin durumu), sayfa görüntüleme süreleri (otomatik <code>screen_view</code> eventleri) ve onboarding (kurulum) aşamaları.</li>
+        <li><strong>Teşhis ve Kilitlenme Günlükleri (Diagnostics & Crash Logs):</strong> Uygulama çökmeleri (fatal/non-fatal errors), hata mesajları ve performans verileri.</li>
     </ul>
 
-    <h2>4. Veri Saklama Süresi</h2>
-    <p>Veriler Firebase’in standart saklama süreleri boyunca (Analytics için 14 ay, Crashlytics için yaklaşık 90 gün) tutulur ve sonrasında otomatik silinir.</p>
+    <h2>2. Veri İşleme Mimarisi ve Üçüncü Taraf Aktarımı</h2>
+    <p>Uygulama, toplanan takma adlı verileri analiz etmek için Google LLC tarafından sağlanan <a href="https://firebase.google.com/policies/analytics" target="_blank" rel="noopener noreferrer">Firebase Analytics</a> ve <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Crashlytics</a> altyapısını kullanır. Veriler bu hizmetler aracılığıyla yurt dışındaki sunuculara aktarılmaktadır. Bu aktarım, ilgili hizmet sağlayıcının veri güvenliği taahhütleri ve teknik koruma önlemleri çerçevesinde gerçekleştirilmektedir. Uygulama herhangi bir reklam ağı (Ad Network) kullanmaz ve verileriniz reklam şirketleriyle, veri komisyoncularıyla veya diğer üçüncü taraflarla ticari amaçlarla paylaşılmaz.</p>
 
-    <h2>5. Veri Güvenliği</h2>
-    <p>Veri sorumlusu, kişisel verilerin hukuka aykırı işlenmesini ve erişilmesini önlemek amacıyla uygun teknik ve idari güvenlik tedbirlerini almaktadır.</p>
+    <h2>3. Veri Saklama Süresi</h2>
+    <p>Uygulama tarafından toplanan veriler, Firebase hizmetlerinin standart veri yaşam döngüsü politikalarına tabidir. Analytics verileri 14 ay, Crashlytics kilitlenme verileri ise yaklaşık 90 gün boyunca saklanır ve bu sürelerin sonunda Firebase hizmetlerinin standart politikalarına göre otomatik olarak silinir.</p>
 
-    <h2>6. KVKK Madde 11 Kapsamındaki Haklarınız</h2>
-    <p>Kanun’un 11. maddesi uyarınca veri sahibi olarak aşağıdaki haklara sahipsiniz:</p>
-    <ul>
-        <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme,</li>
-        <li>Kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme,</li>
-        <li>Kişisel verilerinizin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
-        <li>Yurt içinde veya yurt dışında kişisel verilerinizin aktarıldığı üçüncü kişileri bilme,</li>
-        <li>Kişisel verilerinizin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme,</li>
-        <li>Kişisel verilerinizin silinmesini veya yok edilmesini isteme,</li>
-        <li>İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme,</li>
-        <li>Kişisel verilerinizin kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme.</li>
-    </ul>
-    <p>Haklarınızı kullanmak için <strong>contact@furowlan.com</strong> adresinden bizimle iletişime geçebilirsiniz.</p>
+    <h2>4. KVKK Madde 11 Kapsamındaki Haklarınız ve Teknik Sınırlar</h2>
+    <p>KVKK Madde 11 uyarınca, kişisel verilerinizin işlenip işlenmediğini öğrenme, amacına uygun kullanılıp kullanılmadığını bilme, düzeltilmesini, silinmesini veya yok edilmesini talep etme haklarına sahipsiniz.</p>
+    <p><strong>Önemli Teknik İmkansızlık Bildirimi:</strong> Uygulamanın mimarisi gereği tüm veriler yalnızca cihaz bazlı takma adlı (pseudonymous) kimlikler (App Instance ID) üzerinden tutulmaktadır. Veri sorumlusu olarak, veritabanımızdaki telemetri kayıtlarını gerçek dünyadaki bir kimlikle eşleştirmemiz teknik olarak mümkün değildir. Bireysel veri kayıtlarının ayrıştırılması ve manuel olarak silinmesi, mevcut teknik altyapı çerçevesinde mümkün değildir. Bu nedenle, <strong>contact@furowlan.com</strong> adresi üzerinden tarafımıza ileteceğiniz "veri silme" veya "veriye erişim" talepleri teknik sınırlandırmalara tabidir.</p>
+    <p>Uygulamanın temel işlevselliği telemetri altyapısına bağlı olduğundan uygulama içinden veri toplamanın kapatılması (opt-out) mümkün değildir. Veri toplama işlemini tamamen durdurmak ve mevcut veri akışını kesmek isterseniz, uygulamayı cihazınızdan kaldırmanız (uninstall) gerekmektedir.</p>
+    <p>Haklarınızı kullanmak ve bilgi almak için bizimle iletişime geçebilirsiniz: <strong>contact@furowlan.com</strong></p>
 
     <hr style="margin: 40px 0; border: 1px solid #eee;">
 
     <h1>Privacy Policy (English)</h1>
 
-    <p>This Privacy Policy applies to the Cacık mobile application developed by Furowlan (developer and data controller) as a free service.</p>
+    <p>This Privacy Policy applies to the Cacık mobile application ("Application") developed and published by Furowlan (Data Controller). The Application operates entirely without an authentication or login system and does not collect direct personally identifiable information such as names, emails, or phone numbers.</p>
 
-    <h2>Information Collection and Legal Basis</h2>
-    <p>The Application collects limited technical and usage data to improve performance and user experience. Data processing is based on the legitimate interests of the Data Controller in accordance with applicable data protection laws. This information includes:</p>
+    <h2>1. Information Collection and Legal Basis</h2>
+    <p>To monitor application stability, improve user experience, and analyze feature usage, the Application automatically collects specific telemetry data. Processing is based on the legitimate interests of the Data Controller. The collected data categories include:</p>
     <ul>
-        <li>IP address and operating system information</li>
-        <li>In-app interactions and preferences (university, campus, department, theme, favorite meals, notification status)</li>
-        <li>Screen view durations and diagnostic/crash logs</li>
-    </ul>
-    <p><strong>Important:</strong> The Application does not collect direct personally identifiable information such as names or email addresses. Data is processed in a pseudonymized manner and cannot be directly linked to a specific individual.</p>
-
-    <h2>Advertising</h2>
-    <p>The Application does not use third-party advertising networks and does not collect Advertising IDs.</p>
-
-    <h2>Third-Party Services and International Transfer</h2>
-    <p>Pseudonymized data is processed and securely transferred to servers operated by Google LLC through the following services:</p>
-    <ul>
-        <li><a href="https://firebase.google.com/policies/analytics" target="_blank" rel="noopener noreferrer">Google Analytics for Firebase</a></li>
-        <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Crashlytics</a></li>
+        <li><strong>Device Identifiers:</strong> Pseudonymous, randomly generated identifiers specific to your installation, such as Firebase App Instance ID and Crashlytics Installation UUID.</li>
+        <li><strong>Approximate Location:</strong> Region or city-level location derived automatically from IP addresses.</li>
+        <li><strong>App Activity:</strong> In-app interactions (university, campus, department, theme selections, favorite meals, notification status), automatic screen view tracking (<code>screen_view</code>), and onboarding progression events.</li>
+        <li><strong>Diagnostics and Crash Logs:</strong> Fatal and non-fatal error reports, stack traces, and performance metrics.</li>
     </ul>
 
-    <h2>Data Retention</h2>
-    <p>Data is retained according to the default retention policies of Google LLC services (14 months for Analytics, approximately 90 days for Crashlytics) and automatically deleted thereafter. Uninstalling the application stops new data collection.</p>
+    <h2>2. Data Processing and International Transfer</h2>
+    <p>The Application utilizes <a href="https://firebase.google.com/policies/analytics" target="_blank" rel="noopener noreferrer">Firebase Analytics</a> and <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Crashlytics</a>, services provided by Google LLC, to process the collected telemetry. Consequently, pseudonymous data is transferred to and processed on secure servers located outside your country of residence. This transfer is carried out within the framework of the data security commitments and technical safeguards of the respective service provider. The Application does not use third-party ad networks, and your data is never sold to or shared with data brokers or advertisers.</p>
 
-    <h2>Data Security</h2>
-    <p>The Data Controller implements appropriate technical and organizational measures to safeguard collected information against unauthorized access, alteration, disclosure, or destruction.</p>
+    <h2>3. Data Retention</h2>
+    <p>Data retention policies are governed by the default lifecycles of Firebase services. Analytics data is retained for 14 months, while Crashlytics diagnostic data is stored for approximately 90 days. Upon expiration of these periods, data is automatically deleted according to the standard data lifecycle policies of Firebase services.</p>
 
-    <h2>User Rights</h2>
-    <p>Depending on your jurisdiction, you may have rights to access, correct, or delete your data, or to object to processing. Due to the pseudonymized structure of the data, certain identifiers may be required to process specific requests.</p>
+    <h2>4. User Rights and Technical Limitations</h2>
+    <p>Depending on your jurisdiction (e.g., GDPR, KVKK), you have the right to request access to, correction of, or deletion of your personal data.</p>
+    <p><strong>Notice of Technical Limitation Regarding Deletion Requests:</strong> Because the Application relies exclusively on pseudonymous device identifiers (App Instance ID) without linking them to real-world identities, it is technically impossible for the Data Controller to cross-reference database records to a specific individual. Isolating and manually deleting individual data records is not possible within the framework of the current technical infrastructure. Therefore, manual requests for data access or deletion sent via email are subject to these technical limitations.</p>
+    <p>Telemetry collection is an integral part of the Application’s architecture, and an in-app opt-out mechanism is not provided. To immediately halt all future data collection, you must uninstall the Application from your device.</p>
 
-    <h2>Changes</h2>
-    <p>This Privacy Policy may be updated periodically. Continued use of the Application constitutes acceptance of the updated policy.</p>
-    <p><strong>Effective Date:</strong> March 1, 2026</p>
-
-    <h2>Contact</h2>
-    <p>For privacy-related inquiries, contact us at <strong>contact@furowlan.com</strong>.</p>
+    <h2>5. Contact Information</h2>
+    <p>For any privacy-related inquiries, please contact us at: <strong>contact@furowlan.com</strong></p>
+    <p><strong>Effective Date:</strong> March 2, 2026</p>
 
 </body>
 </html>
