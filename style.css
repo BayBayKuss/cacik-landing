@@ -135,14 +135,17 @@ h1 {
 }
 
 .btn-apple {
-    background: var(--gray-800);
-    color: var(--gray-400);
-    cursor: default;
-    opacity: 0.55;
+    background: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-apple:hover {
-    opacity: 0.65;
+    background: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .btn-icon {
@@ -244,33 +247,35 @@ footer {
 /* ─── RESPONSIVE ─── */
 @media (max-width: 640px) {
     .hero {
-        padding: 28px 20px 24px;
+        padding: 20px 20px 24px;
     }
 
     h1 {
-        font-size: 2.6rem;
+        font-size: 2.4rem;
     }
 
     .app-icon {
-        width: 164px;
-        height: 164px;
-        margin-bottom: 16px;
+        width: 120px;
+        height: 120px;
+        margin-bottom: 12px;
     }
 
     .description {
         font-size: 0.95rem;
-        margin-bottom: 22px;
+        margin-bottom: 24px;
     }
 
     .store-buttons {
         flex-direction: column;
         align-items: stretch;
-        padding: 0 20px;
+        padding: 0 10px;
+        gap: 10px;
     }
 
     .btn {
         justify-content: center;
-        padding: 14px 24px;
+        padding: 12px 20px;
+        border-radius: 12px;
     }
 
     .footer-support {
